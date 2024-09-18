@@ -19,14 +19,16 @@ public class POEPT1 {
     public static void main(String[] args) {
        POEclass external= new POEclass();
        
-       external.Prompt();
+       external.Username_Prompt();
+       
        
         
        if (external.checkUsername()){
            System.out.println("Username is correct");
        } else{
-           System.out.println("Username must contain an _");
+           System.out.println("Username must not be more than 5 characters long and must contain an underscore (_)");
        }
+      
     }
         
      
