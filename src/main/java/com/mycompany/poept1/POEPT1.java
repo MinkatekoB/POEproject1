@@ -13,11 +13,19 @@ import POE.POEclass;
  */
 public class POEPT1 {
 
+    
+     
+
     public static void main(String[] args) {
        POEclass external= new POEclass();
        
        external.Prompt();
         
+       if (external.checkUsername(username)){
+           System.out.println("Username is correct");
+       } else{
+           System.out.println("Username must contain an _");
+       }
     }
         
      
