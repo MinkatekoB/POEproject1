@@ -15,7 +15,7 @@ public class POEclass {
     
     
 //Make sure the user username contains an underscore
-public boolean checkUsername(String name){
+public boolean checkUsername(){
     return username.contains("_");
 }
 //make sure the user password meets all its conditions
@@ -29,8 +29,7 @@ public void Prompt(){
     System.out.println("Please enter your username: ");
     username= User_input.nextLine();
     
-    System.out.println("Please enter your password: ");
-    password= User_input.nextLine();
+   
     
 }
 }

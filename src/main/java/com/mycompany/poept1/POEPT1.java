@@ -20,8 +20,9 @@ public class POEPT1 {
        POEclass external= new POEclass();
        
        external.Prompt();
+       
         
-       if (external.checkUsername(username)){
+       if (external.checkUsername()){
            System.out.println("Username is correct");
        } else{
            System.out.println("Username must contain an _");
