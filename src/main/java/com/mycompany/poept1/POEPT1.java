@@ -20,16 +20,28 @@ public class POEPT1 {
        POEclass external= new POEclass();
        
        external.Username_Prompt();
-       
+       if (external.checkUsername()){
+           System.out.println("Username is correct.");
+           System.out.println("Welcome User !");
+       }
+       else {
+           System.out.println("Username must not be more than 5 characters and should contain an (_)");
+           System.out.println("Username is incorrect , please try again!");
+           
+       }
+       if (external.checkUsername()){
+           external.PasswordPrompt();
+       }
        
         
-       if (external.checkUsername()){
-           System.out.println("Username is correct");
-       } else{
-           System.out.println("Username must not be more than 5 characters long and must contain an underscore (_)");
-       }
-      
+       
+       
     }
+      
+      
+      
+    
+     
         
      
         
