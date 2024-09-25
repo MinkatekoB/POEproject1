@@ -12,19 +12,27 @@ import java.util.Scanner;
 public class POEclass {
     String username;
     String password;
+    String specialcharacters = "!@#$%^&*(){}:<>?[]";
     
     
 //Make sure the user username contains an underscore
 public boolean checkUsername(){
-    return username.contains("_") && username.length()<5 ;
-    
+    return username.contains("_") && username.length()<6;
     
 }
-{
+    
+public void PasswordPrompt(){
+    Scanner User_input  =  new Scanner(System.in);
+    System.out.println("Please enter your password :");
+    password = User_input.nextLine();
 }
+
+
 //make sure the user password meets all its conditions
 public boolean checkPasswordComplexity(){
-    return password.length()>8 && password.contains("_"); 
+    return password.length()<9&& password.contains(specialcharacters) ;
+   
+            
     
 }
 //Prompting user for details
