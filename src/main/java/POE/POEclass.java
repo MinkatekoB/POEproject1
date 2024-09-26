@@ -26,15 +26,12 @@ public void PasswordPrompt(){
     System.out.println("Please enter your password :");
     password = User_input.nextLine();
 }
-
-
 //make sure the user password meets all its conditions
 public boolean checkPasswordComplexity(){
-    return password.length()<9&& password.contains(specialcharacters) ;
-   
-            
-    
+    return password.length()<9&& password.contains(specialcharacters) && password.chars().anyMatch(Character::isUpperCase) &&password.chars().anyMatch(Character::isDigit);
 }
+    
+
 //Prompting user for details
 public void Username_Prompt(){
     Scanner User_input = new Scanner ( System.in);
@@ -43,5 +40,18 @@ public void Username_Prompt(){
     
    
     
+}
+public void RegisterUser(){
+    
+    if(checkUsername()){
+        System.out.println("Username captured successfully.");
+        
+    }
+    else{
+        System.out.println("Username is incorrect , Username must contain a (_) and must not be more than 5 characters. Please try again.");
+    }
+    if (checkUsername()){
+        PasswordPrompt();
+    }
 }
 }
