@@ -28,7 +28,8 @@ public void PasswordPrompt(){
 }
 //make sure the user password meets all its conditions
 public boolean checkPasswordComplexity(){
-    return password.length()<9&& password.contains(specialcharacters) && password.chars().anyMatch(Character::isUpperCase) &&password.chars().anyMatch(Character::isDigit);
+    return password.length()<9&& password.contains(specialcharacters) &&
+            password.chars().anyMatch(Character::isUpperCase) &&password.chars().anyMatch(Character::isDigit);
 }
     
 
@@ -48,10 +49,27 @@ public void RegisterUser(){
         
     }
     else{
-        System.out.println("Username is incorrect , Username must contain a (_) and must not be more than 5 characters. Please try again.");
+        System.out.println("Username is incorrect , Username must contain a (_) and must not be more than 5 characters. Please try again. ");
     }
     if (checkUsername()){
         PasswordPrompt();
     }
+    if(checkPasswordComplexity()){
+        System.out.println("Password captured successfully.");
+    }
+    else {
+        System.out.println("Password is incorrect , Password must contain a special character , a number , a capital letter and must not be more than 8 characters .");
+    }
 }
+public void loginStatus(){
+    if (checkUsername()&& (checkPasswordComplexity())){
+        System.out.println("Welcome User! ");
+        
+    }else{
+        System.out.println("Login attempt unsuccessful, please try again. ");
+    }
+    
+}
+
+
 }
