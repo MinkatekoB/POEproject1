@@ -3,7 +3,6 @@
  */
 
 package com.mycompany.poept1;
-
 import POE.POEclass;
 
 
@@ -19,18 +18,15 @@ public class POEPT1 {
     public static void main(String[] args) {
        POEclass external= new POEclass();
        
+       
+       
+       
+       
        external.Username_Prompt();
-       if (external.checkUsername()){
-           System.out.println("Username is correct.");
-           System.out.println("Welcome User !");
-       }
-       else {
-           System.out.println("Username must not be more than 5 characters and should contain an (_)");
-           System.out.println("Username is incorrect , please try again!");
+       external.RegisterUser();
+       
            
-       }
-       if (external.checkUsername()){
-           external.PasswordPrompt();
+           
        }
        
         
@@ -48,7 +44,7 @@ public class POEPT1 {
       
         
       
-}
+
       
     
       
