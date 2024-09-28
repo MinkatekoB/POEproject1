@@ -6,6 +6,7 @@ package com.mycompany.poept1;
 import POE.POEclass;
 
 
+
 /**
  *
  * @author RC_Student_lab
@@ -20,10 +21,14 @@ public class POEPT1 {
        
        
        
-       
-       
+        
+       external.userDetails();
        external.Username_Prompt();
        external.RegisterUser();
+       external.login_Status();
+       external.LoginUser();
+       
+       
        
            
            
