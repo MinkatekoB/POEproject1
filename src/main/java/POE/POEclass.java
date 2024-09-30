@@ -50,7 +50,7 @@ public boolean checkPasswordComplexity(){
         boolean hasUppercase = false;
         boolean hasDigit = false;
 
-        // Define a regex pattern for special characters
+        // Declarations for special characters
         String specialCharacters = "!@#$%^&*()-+=<>?";
 
         // Iterate through the password characters
@@ -80,6 +80,7 @@ public boolean checkPasswordComplexity(){
    
     
 }
+    //returning all the necessary messaging for password and username conditions 
  public void RegisterUser() {
         if (checkUsername()) {
             System.out.println("Username captured successfully.");
@@ -94,7 +95,7 @@ public boolean checkPasswordComplexity(){
         }
     }
     
-
+//informs the user whether or not their login is successful 
 public boolean  login_Status(){
     if (checkUsername()&&(checkPasswordComplexity()) ){
         System.out.println("Login attempt succesful");
@@ -106,6 +107,7 @@ public boolean  login_Status(){
     
 
 }
+//verifies login details 
 public void LoginUser(){
     if (login_Status()){
         
