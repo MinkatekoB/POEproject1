@@ -20,16 +20,16 @@ public class POEclass {
         System.out.println("=========User Registration==========");
         Scanner User_input  =  new Scanner(System.in);
         System.out.println("Please enter your First Name :");
-        User_input.nextLine();
+        firstname=User_input.nextLine();
         System.out.println("Please enter your Last Name :");
-        User_input.nextLine();
+        lastname=User_input.nextLine();
                 
         
     }
     
 //Make sure the user username contains an underscore
 public boolean checkUsername(){
-  return  username.contains("_") && username.length()<6;
+  return  username.contains("_") && username.length()>=5;
 }
 
     
@@ -80,27 +80,20 @@ public boolean checkPasswordComplexity(){
    
     
 }
-public void RegisterUser(){
+ public void RegisterUser() {
+        if (checkUsername()) {
+            System.out.println("Username captured successfully.");
+            PasswordPrompt();
+            if (checkPasswordComplexity()) {
+                System.out.println("Password captured successfully.");
+            } else {
+                System.out.println("Password is not correctly formatted. Please ensure that the password contains at least 8 characters, a number, a capital letter, and a special character.");
+            }
+        } else {
+            System.out.println("Username is not correctly formatted. Please ensure that your username contains an underscore(_) and is at least 6 characters long.");
+        }
+    }
     
-    if(checkUsername()){
-        System.out.println("Username captured successfully."); 
-    }
-    else{
-        System.out.println("Username is incorrect , Username must contain a (_) and must not be more than 5 characters. Please try again. ");
-    }
-    
-    
-    if (checkUsername()){
-           PasswordPrompt();
-    }
-    
-    if(checkPasswordComplexity()){
-        System.out.println("Password captured successfully.");
-    } else{
-        System.out.println("Password incorrect ! , password should contain a number , a capital letter , a special character and should not be more than 8 characters , please try again.");
-    }
-
-    }
 
 public boolean  login_Status(){
     if (checkUsername()&&(checkPasswordComplexity()) ){
@@ -116,7 +109,7 @@ public boolean  login_Status(){
 public void LoginUser(){
     if (login_Status()){
         
-        System.out.println("Welcome! "+firstname+""+lastname+"Its great to see you again !");
+        System.out.println("Welcome!  "+firstname+"  "+lastname+"   Its great to see you again !");
     }
 }
 }
