@@ -70,10 +70,8 @@ public class POEclassTest {
     @Test
     public void testPasswordPrompt() {
         System.out.println("PasswordPrompt");
-        POEclass instance = new POEclass();
+       
         instance.PasswordPrompt();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -82,7 +80,7 @@ public class POEclassTest {
     @Test
     public void testCheckPasswordComplexity() {
         System.out.println("checkPasswordComplexity");
-        POEclass instance = new POEclass();
+        
         boolean expResult = false;
         boolean result = instance.checkPasswordComplexity();
         assertEquals(expResult, result);
@@ -96,10 +94,10 @@ public class POEclassTest {
     @Test
     public void testUsername_Prompt() {
         System.out.println("Username_Prompt");
-        POEclass instance = new POEclass();
+        
         instance.Username_Prompt();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        
     }
 
     /**
@@ -108,10 +106,9 @@ public class POEclassTest {
     @Test
     public void testRegisterUser() {
         System.out.println("RegisterUser");
-        POEclass instance = new POEclass();
+        
         instance.RegisterUser();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -120,12 +117,10 @@ public class POEclassTest {
     @Test
     public void testLogin_Status() {
         System.out.println("login_Status");
-        POEclass instance = new POEclass();
+       
         boolean expResult = false;
         boolean result = instance.login_Status();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -134,10 +129,6 @@ public class POEclassTest {
     @Test
     public void testLoginUser() {
         System.out.println("LoginUser");
-        POEclass instance = new POEclass();
+       
         instance.LoginUser();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
-}
+    }}
