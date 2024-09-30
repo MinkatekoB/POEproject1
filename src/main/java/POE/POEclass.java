@@ -10,10 +10,10 @@ import java.util.Scanner;
  * @author RC_Student_lab
  */
 public class POEclass {
-    String username;
-    String password;
-    String firstname;
-    String lastname;
+    private String username;
+    private String password;
+    private String firstname;
+    private String lastname;
     
     
     public void userDetails(){
@@ -90,7 +90,7 @@ public boolean checkPasswordComplexity(){
                 System.out.println("Password is not correctly formatted. Please ensure that the password contains at least 8 characters, a number, a capital letter, and a special character.");
             }
         } else {
-            System.out.println("Username is not correctly formatted. Please ensure that your username contains an underscore(_) and is at least 6 characters long.");
+            System.out.println("Username is not correctly formatted. Please ensure that your username contains an underscore(_) and is at least 5 characters long.");
         }
     }
     
@@ -109,7 +109,7 @@ public boolean  login_Status(){
 public void LoginUser(){
     if (login_Status()){
         
-        System.out.println("Welcome!  "+firstname+"  "+lastname+"   Its great to see you again !");
+        System.out.println("Welcome!  "+firstname+"  "+lastname+"  Its great to see you again !");
     }
 }
 }
